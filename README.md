@@ -11,8 +11,9 @@ b] conditions for the best number of perceptrons in hidden layer:
     	The number of hidden neurons should be between the size of the input layer and the size of the output layer.  
     	The number of hidden neurons should be less than twice the size of the input layer.   
     	citation: https://www.heatonresearch.com/2017/06/01/hidden-layers.html so our choice is 11, since it gave us better results.  
-  ouptut layer has 1 perceptron again.  
-c] mini batch processing is done in loop here. The weight matrix 1 dimensions no.of features* no. of hidden layer neurons, i.e, 9*11 here weight matrtix 2 has dimentions 11*1.  
+    
+    ouptut layer has 1 perceptron again.  
+c] mini batch processing is done in loop here. The weight matrix 1 dimensions no.of features* no. of hidden layer neurons, i.e, 9* 11 here weight matrtix 2 has dimentions 11* 1.  
    bias is 0 , this combined with the activation functions used below gave us the best results among the options we had.  
 d] input to hidden has leaky relu as activation, hiddden to output has sigmoid.  
 e] loss funtions is mean squared error. this can be seen in function backprop, where new_weights1 variable calculation  
