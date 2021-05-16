@@ -3,31 +3,28 @@ A simple neural network implementation in python to understand the working.
 
 
 about the dataset:
-  - LBW (Low birthweight) classification
-about the model:
+  - LBW (Low birthweight) classification  
+about the model:  
 
-a] 3 layers. Input, hidden, and output, 1 layer each.
-b] conditions for the best number of perceptrons in hidden layer:
-    	The number of hidden neurons should be between the size of the input layer and the size of the output layer.
-    	The number of hidden neurons should be less than twice the size of the input layer.
-    	citation: https://www.heatonresearch.com/2017/06/01/hidden-layers.html
-        so our choice is 11, since it gave us better results.
-  ouptut layer has 1 perceptron again.
-c] mini batch processing is done in loop here. The weight matrix 1
-   dimensions no.of features* no. of hidden layer neurons, i.e, 9*11 here
-   weight matrtix 2 has dimentions 11*1.
-   bias is 0 , this combined with the activation functions used below gave us the best results among the options we had.
-d] input to hidden has leaky relu as activation, hiddden to output has sigmoid.
-e] loss funtions is mean squared error. this can be seen in function backprop, where new_weights1 variable calculation
+a] 3 layers. Input, hidden, and output, 1 layer each.  
+b] conditions for the best number of perceptrons in hidden layer:  
+    	The number of hidden neurons should be between the size of the input layer and the size of the output layer.  
+    	The number of hidden neurons should be less than twice the size of the input layer.   
+    	citation: https://www.heatonresearch.com/2017/06/01/hidden-layers.html so our choice is 11, since it gave us better results.  
+  ouptut layer has 1 perceptron again.  
+c] mini batch processing is done in loop here. The weight matrix 1 dimensions no.of features* no. of hidden layer neurons, i.e, 9*11 here weight matrtix 2 has dimentions 11*1.  
+   bias is 0 , this combined with the activation functions used below gave us the best results among the options we had.  
+d] input to hidden has leaky relu as activation, hiddden to output has sigmoid.  
+e] loss funtions is mean squared error. this can be seen in function backprop, where new_weights1 variable calculation  
     has a term 2*(self.y - self.out) * sigmoid_derivative(self.out), which is the expression given by differentiating the
-    loss function.
-f] learning rate for our model is 0.01.
+    loss function.  
+f] learning rate for our model is 0.01.  
  
--and finally our testing accuracy lands at 86.2%.
+-and finally our testing accuracy lands at 86.2%.  
 
-uniqeuness in our model:
+uniqeuness in our model:  
 	-we have done mini batch processing in loop. this allows our model to look at the training dataset in smaller parts and then minimize the errors accordingly
- 	and is computationally efficient as all computer resources are not being used to process a single sample rather are being used for all training samples
+ 	and is computationally efficient as all computer resources are not being used to process a single sample rather are being used for all training samples  
  
 
 steps to run files:
